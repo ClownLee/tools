@@ -1,6 +1,6 @@
 {
   "name": "@clownlee/tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "array tools, array to tree and tree to array, deep clone.",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "deep",
     "clone"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ClownLee/tools.git"
+  },
   "author": "LiWentao",
   "license": "ISC"
 }
