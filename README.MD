@@ -1,5 +1,5 @@
 - example treeToArray
-```
+```javascript
   import tools from '@clownlee/tools'
 
   const tree = [
@@ -25,10 +25,10 @@
     children_field: 'children'
   })
 
-```javascript
+```
 
 - example arrayToTree
-```
+```javascript
   import tools from '@clownlee/tools'
 
   const arr = [
@@ -51,12 +51,12 @@
     children_field: 'children'
   })
 
-```javascript
+```
 
 - example deepClone
-```
+```javascript
   import tools from '@clownlee/tools'
 
   const newArr = tools.arr.deepClone(arr)
-```javascript
+```
 
