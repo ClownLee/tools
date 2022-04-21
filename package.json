@@ -1,0 +1,17 @@
+{
+  "name": "@clownlee/tools",
+  "version": "1.0.0",
+  "description": "array tools, array to tree and tree to array, deep clone.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "array",
+    "tree",
+    "deep",
+    "clone"
+  ],
+  "author": "LiWentao",
+  "license": "ISC"
+}
