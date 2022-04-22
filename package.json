@@ -1,6 +1,6 @@
 {
   "name": "@clownlee/tools",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "array tools, array to tree and tree to array, deep clone, html encode, html decode.",
   "main": "index.js",
   "scripts": {
