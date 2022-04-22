@@ -61,6 +61,7 @@
 ```
 
 - example html.encode
+ - Neet html.encode window.document
 ```javascript
   import tools from '@clownlee/tools'
 
@@ -71,6 +72,7 @@
 ```
 
 - example html.decode
+ - Neet html.decode window.document
 ```javascript
   import tools from '@clownlee/tools'
 
