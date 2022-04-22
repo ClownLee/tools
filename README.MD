@@ -61,7 +61,7 @@
 ```
 
 - example html.encode
- - Neet html.encode window.document
+ - Neet window.document
 ```javascript
   import tools from '@clownlee/tools'
 
@@ -72,13 +72,13 @@
 ```
 
 - example html.decode
- - Neet html.decode window.document
+ - Neet window.document
 ```javascript
   import tools from '@clownlee/tools'
 
   const text = '&lt;div&gt;&lt;h1&gt;哈哈哈哈&lt;/h1&gt;&lt;h2&gt;嘿嘿嘿嘿&lt;/h2&gt;&lt;/div&gt;'
   const html = tools.html.decode(text)
   
-  // html = '<div><h1>哈哈哈哈</h1><h2>嘿嘿嘿嘿</h2></div>'
+  // html = <div><h1>哈哈哈哈</h1><h2>嘿嘿嘿嘿</h2></div>
 ```
 

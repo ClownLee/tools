@@ -1,7 +1,7 @@
 {
   "name": "@clownlee/tools",
-  "version": "1.0.4",
-  "description": "array tools, array to tree and tree to array, deep clone.",
+  "version": "1.0.5",
+  "description": "array tools, array to tree and tree to array, deep clone, html encode, html decode.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,9 @@
     "array",
     "tree",
     "deep",
-    "clone"
+    "clone",
+    "html decode",
+    "html encode"
   ],
   "repository": {
     "type": "git",
