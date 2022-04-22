@@ -1,3 +1,7 @@
+const jsdom = require('jsdom')
+const { JSDOM } = jsdom;
+const { document } = (new JSDOM('')).window;
+
 const encode = (html) => {
   var temp = document.createElement("div");
   (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
