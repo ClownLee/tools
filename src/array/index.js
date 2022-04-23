@@ -1,4 +1,4 @@
-const arrayToTree = (items, options) => {
+const arrayToTree = (items, options = {}) => {
   if (!options.id_field) options.id_field = 'id'
   if (!options.pid_field) options.pid_field = 'pid'
   if (!options.children_field) options.children_field = 'children'
@@ -36,7 +36,7 @@ const treeToArray_visitNode = (node, items, options, parent_id) => {
   delete node[children_field];
 }
   
-const treeToArray = (tree, options) => {
+const treeToArray = (tree, options = {}) => {
   if (!options.id_field) options.id_field = 'id'
   if (!options.pid_field) options.pid_field = 'pid'
   if (!options.children_field) options.children_field = 'children'
@@ -61,5 +61,49 @@ const deepClone = (obj) => {
   }
   return objClone;
 }
+const getParent = (arr, id, items, options) => {
+  const { id_field, pid_field } = options
+  const tmp = arr.filter((i) => i[id_field] == id)[0]
 
-export default { arrayToTree, treeToArray, deepClone }
+  if(tmp && tmp[pid_field]) {
+    items.unshift(tmp)
+    getParent(arr, tmp[pid_field], items, options)
+  }else {
+    items.unshift(tmp)
+  }
+
+}
+
+const findParentTree = (tree, son_id, options = {}) => {
+  if (!options.id_field) options.id_field = 'id'
+  if (!options.pid_field) options.pid_field = 'pid'
+  if (!options.children_field) options.children_field = 'children'
+  const { id_field, pid_field } = options
+
+  const arr = treeToArray(tree, options)
+  const items = []
+  const tmp = arr.filter( i => i[id_field] == son_id)[0]
+  if (tmp) {
+    items.unshift(tmp)
+    getParent(arr, tmp[pid_field], items, options)
+  }
+
+  return items
+}
+
+const findParentArr = (arr, son_id, options = {}) => {
+  if (!options.id_field) options.id_field = 'id'
+  if (!options.pid_field) options.pid_field = 'pid'
+  const { id_field, pid_field } = options
+
+  const items = []
+  const tmp = arr.filter( i => i[id_field] == son_id)[0]
+  if (tmp) {
+    items.unshift(tmp)
+    getParent(arr, tmp[pid_field], items, options)
+  }
+
+  return items
+}
+
+export default { arrayToTree, treeToArray, findParentTree, findParentArr, deepClone }
