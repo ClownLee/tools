@@ -1,3 +1,8 @@
+/**
+ * html 标签转义
+ * @param {*} html 
+ * @returns 
+ */
 const encode = (html) => {
   var temp = window.document.createElement("div")
   temp.textContent ? (temp.textContent = html) : (temp.innerText = html)
@@ -6,6 +11,11 @@ const encode = (html) => {
   return output
 }
 
+/**
+ * html 标签反转义
+ * @param {*} text 
+ * @returns 
+ */
 const decode = (text) => {
   var temp = window.document.createElement("div")
   temp.innerHTML = text
