@@ -139,7 +139,7 @@
 ```
 
 - example html.encode
- - Neet window.document
+ - Need window.document
 ```javascript
   import tools from '@clownlee/tools'
 
@@ -150,7 +150,7 @@
 ```
 
 - example html.decode
- - Neet window.document
+ - Need window.document
 ```javascript
   import tools from '@clownlee/tools'
 
